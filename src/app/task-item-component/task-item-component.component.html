@@ -1,0 +1,10 @@
+<div class="task-item" appHighlightUrgent [dueDate]="task.dueDate">
+  <h3>{{ task.name }}</h3>
+  <p>Due Date: {{ task.dueDate | date: 'short' }}</p>
+  <p>Status: <span [class.completed]="task.status === 'completed'">{{ task.status }}</span></p>
+  <button 
+    *ngIf="task.status === 'pending'" 
+    (click)="markTaskAsCompleted()">
+    Mark as Completed
+  </button>
+</div>

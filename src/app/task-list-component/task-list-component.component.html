@@ -1,0 +1,7 @@
+<section class="task-list">
+<app-task-item-component *ngFor="let task of tasks"
+    [task]="task"
+    (markAsCompleted)="markTaskAsCompleted($event)" >
+
+</app-task-item-component>
+</section>
